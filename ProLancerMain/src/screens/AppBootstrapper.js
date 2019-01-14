@@ -18,9 +18,10 @@ export default class AppBootstrapper extends Component {
     }
     render() {
         if (this.state.loading) {
-            return <Spinner color='red' />
+            return <Spinner style={[{justifyContent: 'center'}, {alignSelf: 'center'}]}
+            color='red' />
         }
-        return <FooterTabNavigation />
+        return <FooterTabNavigation />;
 
     }
 }
