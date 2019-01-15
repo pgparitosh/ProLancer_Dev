@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Body, Text } from 'native-base';
+import { Header, Body, Text, Icon } from 'native-base';
 import styles from '../styles/styles.js';
 
 export default class HeaderTab extends Component {

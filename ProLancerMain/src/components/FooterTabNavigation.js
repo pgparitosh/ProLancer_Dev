@@ -1,12 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { Content, Icon } from 'native-base';
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import { Content, Icon } from 'native-base';
-import styles from '../styles/styles.js';
 import SearchScreen from '../screens/SearchScreen';
 import ChatScreen from '../screens/ChatScreen';
-import WorkHistoryScreen from '../screens/WorkHistoryScreen';
+import WorkHistoryTabsScreen from '../screens/WorkHistoryTabsScreen';
 
 const getTabBarIcon = (navigation, focused) => {
   const { routeName } = navigation.state;
@@ -38,7 +37,7 @@ export default FooterTabNAvigation = createAppContainer (
   createBottomTabNavigator(
     {
       Profile: { screen: ProfileScreen },
-      "Work History": { screen: WorkHistoryScreen },
+      "Work History": { screen: WorkHistoryTabsScreen },
       Search: { screen: SearchScreen },
       Chat: { screen: ChatScreen },
       Settings: { screen: SettingsScreen },

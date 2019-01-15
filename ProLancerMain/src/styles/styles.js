@@ -90,5 +90,9 @@ export default {
     },
     bgBlack: {
         backgroundColor: '#000'
+    },
+    workItemCard: {
+        width: '100%',
+        alignSelf: 'center'
     }
 };
