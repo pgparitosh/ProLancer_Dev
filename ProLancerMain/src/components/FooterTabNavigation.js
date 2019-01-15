@@ -5,6 +5,8 @@ import SettingsScreen from '../screens/SettingsScreen';
 import { Content, Icon } from 'native-base';
 import styles from '../styles/styles.js';
 import SearchScreen from '../screens/SearchScreen';
+import ChatScreen from '../screens/ChatScreen';
+import WorkHistoryScreen from '../screens/WorkHistoryScreen';
 
 const getTabBarIcon = (navigation, focused) => {
   const { routeName } = navigation.state;
@@ -12,9 +14,13 @@ const getTabBarIcon = (navigation, focused) => {
   if (routeName === 'Profile') {
     iconName = 'user';
   } else if (routeName === 'Settings') {
-    iconName = 'gear';
+    iconName = 'cogs';
   } else if (routeName === 'Search') {
     iconName = 'search';
+  } else if (routeName === 'Chat') {
+    iconName = 'comment';
+  } else if (routeName === 'Work History') {
+    iconName = 'briefcase'
   }
 
   // You can return any component that you like here!
@@ -32,7 +38,9 @@ export default FooterTabNAvigation = createAppContainer (
   createBottomTabNavigator(
     {
       Profile: { screen: ProfileScreen },
+      "Work History": { screen: WorkHistoryScreen },
       Search: { screen: SearchScreen },
+      Chat: { screen: ChatScreen },
       Settings: { screen: SettingsScreen },
     },
     {
